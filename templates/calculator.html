@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+    
+    <form method="POST">
+        <label for="text">Enter Text (Max 5 characters):</label>
+        <input type="text" name="num1" placeholder="Enter number 1" required maxlength="5">
+        <label for="text">Enter Text (Max 5 characters):</label>
+        <input type="text" name="num2" placeholder="Enter number 2" required maxlength="5">
+        <select name="operation">
+            <option value="add">Add</option>
+            <option value="subtract">Subtract</option>
+            <option value="multiply">Multiply</option>
+            <option value="divide">Divide</option>
+        </select>
+        <input type="submit" value="Calculate">
+    </form>
+
+    {% if result %}
+    <h2>Result: {{ result }}</h2>
+    {% endif %}
+</body>
+</html>
